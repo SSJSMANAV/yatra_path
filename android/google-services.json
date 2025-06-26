@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "196808072841",
+    "project_id": "yatrapath-fe5dc",
+    "storage_bucket": "yatrapath-fe5dc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:196808072841:android:77f9f47297908e83c63058",
+        "android_client_info": {
+          "package_name": "com.example.yatra_path"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCza5Lv6cyBL2-5uFwGKl4vgZfAZdIZWm0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

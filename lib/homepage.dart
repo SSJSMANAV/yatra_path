@@ -11,11 +11,10 @@ class Homepage extends StatefulWidget {
 class _HomepageState extends State<Homepage> {
   final user = FirebaseAuth.instance.currentUser;
 
-  Future<void> signOut() async {
+  signOut() async {
     await FirebaseAuth.instance.signOut(); // Only Firebase sign out
 
     // Navigate back to login screen
-    Navigator.of(context).popUntil((route) => route.isFirst);
   }
 
   @override
@@ -54,7 +53,7 @@ class _HomepageState extends State<Homepage> {
               ),
               const SizedBox(height: 24),
               ElevatedButton.icon(
-                onPressed: signOut,
+                onPressed: (() => signOut()),
                 icon: const Icon(Icons.logout),
                 label: const Text('Sign Out'),
                 style: ElevatedButton.styleFrom(

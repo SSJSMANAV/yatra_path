@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:yatra_path/homepage.dart';
 import 'package:yatra_path/login.dart';
 import 'package:yatra_path/main.dart';
+import 'package:yatra_path/verifyemail.dart';
 
 class Wrapper extends StatefulWidget {
   const Wrapper({super.key});
@@ -19,7 +20,12 @@ class _WrapperState extends State<Wrapper> {
         stream: FirebaseAuth.instance.authStateChanges(),
         builder: (context, snapshot) {
           if (snapshot.hasData) {
-            return Homepage();
+            print(snapshot.data);
+            if (snapshot.data!.emailVerified) {
+              return Homepage();
+            } else {
+              return VerifyEmail();
+            }
           } else {
             return Login();
           }
